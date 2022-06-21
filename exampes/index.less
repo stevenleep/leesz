@@ -1,0 +1,7 @@
+@import "lessfun/lib/loop.less";
+
+@keyframes fadeIn {
+    .keyframe-loop(1, @impl:{
+        opacity: if(@keyframe, 1, 0);
+    });
+};

@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  lessfun: ^1.1.0
+
+devDependencies:
+  lessfun: 1.1.0
+
+packages:
+
+  /lessfun/1.1.0:
+    resolution: {integrity: sha512-2Jgz7yG2nGDAwsS0DFqoIoRdBO1AINtj/5BK1j9oToGoAj1as84fFFArihSxYmmnSI6kTn0FkL++cGZ88ejdfA==}
+    dev: true

@@ -1,0 +1,20 @@
+@import "./math.less";
+
+.keyframe-loop(@end, @impl: {}, @start: 0, @step: 1) when (@start <= @end) {
+  @keyframe: .percentage(@start, @end) [ @value];
+  @{keyframe} {
+    @impl();
+  }
+  .keyframe-loop(@end, @impl, @start + @step, @step);
+}
+
+.loop-collections(@collections, @impl: {}) {
+  .outloop(@index: length(@collections)) when (@index > 0) {
+    @item: extract(@collections, @index);
+    &-@{item} {
+      @impl();
+    }
+    .outloop(@index - 1);
+  }
+  .outloop;
+}
