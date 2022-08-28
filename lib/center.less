@@ -1,0 +1,53 @@
+.flex-center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.grid-center {
+    height: inherit;
+    width: inherit;
+    display: grid;
+    place-items: center center;
+}
+
+.text-vertical-center(@height) {
+    height: @height;
+    line-height: @height;
+    white-space: nowrap;
+}
+
+/**
+    幽灵方案
+*/
+.ghost-center {
+    position: relative;
+}
+
+.ghost-center::before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    vertical-align: middle;
+}
+
+.ghost-center p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/**
+    定位
+*/
+.position-center-parent {
+    position: relative;
+}
+.position-center-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

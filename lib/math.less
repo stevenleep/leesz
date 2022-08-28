@@ -1,4 +1,21 @@
 @default-max-percentage: 100%;
-.percentage(@current, @total) {
-    @value: (@current / @total) * @default-max-percentage;
+
+.maths {
+    .difference(@first, @last) {
+        @value: (@first - @last);
+    }
+    .percentage(@current, @total) {
+        @value: (@current / @total) * @default-max-percentage;
+    }    
 }
+
+// @viewport-height: 1000px;
+// @max-width: 400px;
+
+// .test-container {
+//     @width: .maths.difference(@viewport-height, .nav[height])[];
+//     width: if((@width > @max-width), @width, @max-width);
+// }
+// .nav {
+//   height: 220px;
+// }

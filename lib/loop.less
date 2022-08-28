@@ -9,12 +9,12 @@
 }
 
 .loop-collections(@collections, @impl: {}) {
-  .outloop(@index: length(@collections)) when (@index > 0) {
+  .out-loop(@index: length(@collections)) when (@index > 0) {
     @item: extract(@collections, @index);
     &-@{item} {
       @impl();
     }
-    .outloop(@index - 1);
+    .out-loop(@index - 1);
   }
-  .outloop;
+  .out-loop;
 }
