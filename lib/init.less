@@ -1,0 +1,48 @@
+// 使用less variable 使得外界可以控制
+@app-global-box-sizing: border-box;
+@app-global-line-height: 1.5;
+
+html {
+    box-sizing: @app-global-box-sizing;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: @app-global-line-height;
+}
+
+// button reset
+button {
+    all: unset;
+}
+
+// reset ul, ol
+ul,
+ol {
+    list-style: none;
+}
+
+// reset a
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/**
+    视障 可访问性 支持
+*/
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: none;
+    outline: #000 dotted 2px;
+    outline-offset: .05em;
+}
